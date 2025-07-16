@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bus Booking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="search.css">
+ 
+</head>
+<body>
+  >
+  <div class="container">
+    <form class="search-bar">
+      <label>
+        Origin
+        <select>
+          <option>Delhi</option>
+        </select>
+      </label>
+      <label>
+        Destination
+        <select>
+          <option>Manali</option>
+        </select>
+      </label>
+      <label>
+        Onward Date
+        <input type="date" value="2025-07-16">
+      </label>
+      <label>
+        Return Date
+        <input type="date">
+      </label>
+      <button type="submit">Search</button>
+    </form>
+    <div class="dates-bar">
+      <button class="active">Wed 16 Jul</button>
+      <button>Thu 17 Jul</button>
+      <button>Fri 18 Jul</button>
+      <button>Sat 19 Jul</button>
+      <button>Sun 20 Jul</button>
+      <button>Mon 21 Jul</button>
+      <button>Tue 22 Jul</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Bus Type</th>
+          <th>Departure</th>
+          <th>Duration</th>
+          <th>Arrival</th>
+          <th>Available Seat</th>
+          <th>Fare</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Delhi to Manali<br><small>Via +6 +15 +16</small></td>
+          <td>2+2 Volvo 9600 Semi Sleeper, AC<br><small>(45 seats)</small></td>
+          <td>17:45<br>Wed, 16 Jul<br><a href="#">Boarding Points</a></td>
+          <td>12:15 Hrs</td>
+          <td>06:00<br>Thu, 17 Jul<br><a href="#">Dropping Points</a></td>
+          <td>0 Seats available</td>
+          <td>
+            <span class="fare-discount">&#8377; 1299</span>
+            <span class="fare-current">&#8377; 1049</span>
+          </td>
+          <td>
+            <button class="btn-request" disabled>REQUEST</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Delhi to Manali<br><small>Via</small></td>
+          <td>2+2 Volvo Premium Semi Sleeper Multi-Axle, AC<br><small>(55 seats)</small></td>
+          <td>18:30<br>Wed, 16 Jul<br><a href="#">Boarding Points</a></td>
+          <td>12:00 Hrs</td>
+          <td>06:30<br>Thu, 17 Jul<br><a href="#">Dropping Points</a></td>
+          <td>8 Seats available</td>
+          <td>
+            <span class="fare-discount">&#8377; 1499</span>
+            <span class="fare-current">&#8377; 1249</span>
+          </td>
+          <td>
+            <button class="btn-view-seats">VIEW SEATS</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    
+    document.querySelectorAll('.btn-view-seats').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        alert('Proceed to seat selection (feature not implemented)');
+      });
+    });
+  </script>
+</body>
+</html>
